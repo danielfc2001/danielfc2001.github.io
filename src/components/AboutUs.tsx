@@ -6,7 +6,7 @@ const AboutUs: FC = () => {
     <section className="position-relative vh-100 overflow-x-hidden py-5 mx-0">
       <div className="d-block d-lg-flex justify-content-between align-items-stretch">
         <div className="about-us-img-container">
-          <AboutUsImage src="./public/JPG.jpg" />
+          <AboutUsImage src="./src/assets/JPG.jpg" />
           <div className="translate-middle about-us-image-text p-4">
             <p>Daniel Fundora</p>
           </div>
