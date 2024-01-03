@@ -1,0 +1,11 @@
+.container-pill {
+    background-color: #2f3338;
+    border-bottom-left-radius: 1rem !important;
+    border-bottom-right-radius: 1rem !important;
+}
+
+.container-pill-empty-text {
+    color: #fff;
+    text-align: center;
+    margin-block: 2rem !important;
+}

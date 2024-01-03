@@ -1,0 +1,30 @@
+.lenguaje-pill {
+    height: auto !important;
+    color: #fff !important;
+    background-color: #495057 !important;
+    border-radius: .5rem !important;
+}
+
+.progress-skill {
+    background-color: #212529 !important;
+    border-radius: .2rem !important;
+    height: 1rem;
+}
+
+.description-pill-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background-color: #2f3338;
+    color: #ced4da;
+    text-decoration: none;
+    padding-block: .1rem;
+    margin-inline: auto;
+    border: 1px solid #0d6efd;
+    border-radius: 1rem;
+}
+
+.description-pill-btn i {
+    margin-right: .30rem !important;
+}

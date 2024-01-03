@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+/* @import url('../public/assets/fonts/Rubik-VariableFont_wght.ttf'); */
+
+:root {
+  font-family: 'Rubik', sans-serif !important;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  background-color: #343a40;
+}

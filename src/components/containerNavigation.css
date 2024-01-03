@@ -1,0 +1,35 @@
+.container-header {
+    background-color: #212529;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.learn-navigation-link {
+    background-color: #212529 !important;
+    color: #ced4da !important;
+    border: 0 !important;
+}
+
+.learn-navigation-link:first-child {
+    border-top-left-radius: 1rem !important;   
+}
+
+.learn-navigation-link:last-child {
+    border-top-right-radius: 1rem !important;
+}
+
+.learn-navigation-link:hover {
+    color: #fff;
+    background-color: #212529 !important;
+}
+
+.learn-navigation-link:focus {
+    color: #fff;
+    background-color: #212529 !important;
+}
+
+.learn-navigation-link.active {
+    border-top: .2rem solid #0d6efd !important;
+    background-color: #2f3338 !important;
+    border-bottom: 0 !important;
+}
