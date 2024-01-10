@@ -5,6 +5,16 @@ import { ReactElement } from "react";
  *  **/
 
 /**
+ * ABOUT US TYPES
+ * **/
+
+export type AboutUsSkillCardTypes = {
+  skill: string
+  usedLenguageIcon?: string
+  useTecIcon?: string
+}
+
+/**
  * CONTAINER PILL TYPES
  * **/
 
@@ -13,7 +23,9 @@ export type ContainerPillsObj = {
   img: string;
   progress: number;
   description?: string;
+  tecs?: string[];
   link?: string;
+  demo?: string;
 };
 
 /**
@@ -43,6 +55,17 @@ export type PillTitleType = {
   icon?: string;
   description?: string;
   link?: string;
+};
+
+export type PillProjectTypes = {
+  className?: string;
+  title: string;
+  progress?: number;
+  icon?: string;
+  description?: string;
+  tecs?: string[];
+  code?: string;
+  demo?: string;
 };
 
 export type LenguagePillIconType = {

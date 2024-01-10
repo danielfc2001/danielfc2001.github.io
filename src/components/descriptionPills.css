@@ -5,6 +5,22 @@
     border-radius: .5rem !important;
 }
 
+.project-pill-container {
+    display: flex;
+}
+
+.project-pill {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: auto !important;
+    color: #fff !important;
+    background-color: #495057 !important;
+    padding-top: 0 !important;
+    padding-bottom: .5rem !important;
+    border-radius: .5rem !important;
+}
+
 .progress-skill {
     background-color: #212529 !important;
     border-radius: .2rem !important;
@@ -15,16 +31,40 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
     background-color: #2f3338;
     color: #ced4da;
     text-decoration: none;
     padding-block: .1rem;
-    margin-inline: auto;
-    border: 1px solid #0d6efd;
-    border-radius: 1rem;
+    padding-inline: 2rem;
+    border: 1px solid #fff;
+    border-radius: .6rem;
 }
 
 .description-pill-btn i {
-    margin-right: .30rem !important;
+    margin-right: .3rem !important;
+}
+
+.pill-pr-tecs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-inline: 1rem !important;
+    margin-bottom: .5rem;
+}
+
+.pill-pr-tec {
+    margin-inline: auto;
+}
+
+.pill-pr-description {
+    flex-grow: 1;
+    padding-inline: 1rem !important;
+    font-size: .8rem;
+    font-weight: 200;
+}
+
+.pill-pr-image {
+    display: block;
+    width: 100%;
+    height: 30vh;
+    border-radius: .5rem;
 }

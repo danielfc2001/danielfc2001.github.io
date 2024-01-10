@@ -14,7 +14,7 @@ const DescriptionPillProgress: FC<PillProgressTypes> = ({ valueNow }) => {
         aria-valuemax={100}
       >
         <div
-          className="progress-bar bg-success"
+          className="progress-bar bg-primary"
           style={{ width: `${valueNow}%` }}
         ></div>
         <span className="position-absolute top-50 start-50 translate-middle">

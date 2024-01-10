@@ -52,6 +52,8 @@ const tecsLearned = [
   },
 ];
 
+const skillsLearned: [] = [];
+
 const LearnContainer: FC = () => {
   const { learnActiveNav } = useContext(GlobalContext) as IGlobal;
   return (
@@ -66,9 +68,15 @@ const LearnContainer: FC = () => {
         />
         <ContainerNavigationTab name="Skills" tabName="learn" tabIndex={2} />
       </ContainerNavigation>
-      {learnActiveNav === 0 && <ContainerPills content={lenguagesLearned} />}
-      {learnActiveNav === 1 && <ContainerPills content={tecsLearned} />}
-      {learnActiveNav === 2 && <ContainerPills content={lenguagesLearned} />}
+      {learnActiveNav === 0 && (
+        <ContainerPills target="learned" content={lenguagesLearned} />
+      )}
+      {learnActiveNav === 1 && (
+        <ContainerPills target="learned" content={tecsLearned} />
+      )}
+      {learnActiveNav === 2 && (
+        <ContainerPills target="learned" content={skillsLearned} />
+      )}
     </section>
   );
 };

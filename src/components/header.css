@@ -3,38 +3,77 @@
     display: block !important;
     text-align: center;
     padding-block: 0 !important;
+    margin-inline: 1rem !important;
+    backdrop-filter: blur(7px);
 }
 
 .brand {
-    display: block !important;
+    display: none !important;
 }
 
 .navbar-header-nav {
     display: flex !important;
     flex-direction: row !important;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding-block: .5rem;
 }
 
-.main-nav-item.active {
-    border-right: .2rem solid var(--bs-primary);
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+.main-nav-item {
+    padding-inline: 0px !important;
+    padding-block: .01rem !important;
+}
+
+.main-nav-item a {
+    color: #ced4da;
+    background-color: var(--bs-dark);
+    padding-inline: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 1rem;
+    transition: all .3s ease-in-out !important;
+}
+
+.main-nav-item a:hover {
+    color: var(--bs-dark);
+    background-color: #ced4da;
+    border-color: var(--bs-dark);
+}
+
+.main-nav-item a:focus {
+    color: var(--bs-dark);
+    background-color: #ced4da;
+    border-color: var(--bs-dark);
 }
 
 .main-nav-item.active a {
-    color: #fff;
+    color: var(--bs-dark);
+    background-color: #ced4da;
+    border-color: var(--bs-dark);
 }
 
 .main-nav-item span {
     display: none;
 }
 
+.mobile-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky !important;
+    top: 0 !important;
+    font-size: 2rem;
+    z-index: 1030;
+    margin-top: 0 !important;
+}
+
+.sticky-top {
+    top: 6% !important;
+}
+
 @media (min-width: 992px) {
     .navbar-header {
         display: flex !important;
         text-align: left !important;
+        margin-inline: 0 !important;
     }
 
     .brand {
@@ -44,8 +83,21 @@
     .navbar-header-nav {
         padding-block: 0 !important;
     }
+    
+    .main-nav-item {
+        padding-block: 1rem !important;
+        padding-inline: 1.5rem !important;
+    }
 
     .main-nav-item span {
         display: inline !important;
+    }
+
+    .mobile-brand {
+        display: none !important;
+    }
+
+    .sticky-top {
+        top: 0 !important;
     }
 }

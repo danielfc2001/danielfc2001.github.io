@@ -10,3 +10,17 @@
 body {
   background-color: #343a40;
 }
+
+.container {
+  padding-inline: 0 !important;
+}
+
+.main {
+  margin-top: 0 !important;
+}
+
+@media (min-width: 992px) {
+  .main {
+    margin-top: 1.5rem !important;
+  }
+}

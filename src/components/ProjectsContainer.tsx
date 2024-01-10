@@ -8,20 +8,26 @@ import ContainerPills from "./ContainerPills";
 const PROJECTSPENDINGS = [
   {
     title: "Ad`Publisher",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, quam!",
     progress: 50,
-    img: "",
+    img: "https://danielfc2001.github.io/dd-dev-profile/assets/JPG.jpg",
+    tecs: ["react", "nodejs"],
     link: "#",
+    demo: "#",
+  },
+  {
+    title: "DD`Dev Profile",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, quam!",
+    progress: 50,
+    img: "https://danielfc2001.github.io/dd-dev-profile/assets/JPG.jpg",
+    link: "#",
+    demo: "#",
   },
 ];
 
-const PROJECTSFINISHED = [
-  {
-    title: "DD`Dev Profile",
-    progress: 50,
-    img: "",
-    link: "#",
-  },
-];
+const PROJECTSFINISHED: [] = [];
 
 const ProjectsContainer: FC = () => {
   const { projectActiveNav } = useContext(GlobalContext) as IGlobal;
@@ -30,18 +36,22 @@ const ProjectsContainer: FC = () => {
       <ContainerHeader title="Proyectos" />
       <ContainerNavigation>
         <ContainerNavigationTab
-          name="Pendings"
+          name="En Desarrollo"
           tabName="projects"
           tabIndex={0}
         />
         <ContainerNavigationTab
-          name="Finished"
+          name="Finalizados"
           tabName="projects"
           tabIndex={1}
         />
       </ContainerNavigation>
-      {projectActiveNav === 0 && <ContainerPills content={PROJECTSPENDINGS} />}
-      {projectActiveNav === 1 && <ContainerPills content={PROJECTSFINISHED} />}
+      {projectActiveNav === 0 && (
+        <ContainerPills target="projects" content={PROJECTSPENDINGS} />
+      )}
+      {projectActiveNav === 1 && (
+        <ContainerPills target="projects" content={PROJECTSFINISHED} />
+      )}
     </section>
   );
 };

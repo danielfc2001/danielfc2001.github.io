@@ -1,5 +1,5 @@
-import { FC, ReactElement, useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { FC, ReactElement } from "react";
+/* import { useLocation } from "react-router-dom"; */
 import "./header.css";
 
 type HeaderComponent = {
@@ -9,7 +9,7 @@ type HeaderComponent = {
 const Header: FC<HeaderComponent> = ({ children }) => {
   return (
     <nav
-      className="navbar-header navbar sticky-top navbar-dark bg-dark shadow"
+      className="navbar-header navbar sticky-top shadow"
       style={{ borderRadius: "1rem" }}
     >
       {children}
@@ -17,10 +17,10 @@ const Header: FC<HeaderComponent> = ({ children }) => {
   );
 };
 
-type HeaderLinksType = {
+/* type HeaderLinksType = {
   name: string;
   tabIndex: number;
-};
+}; */
 
 type TabNameTypes = {
   title: string;
@@ -50,7 +50,7 @@ export const tabsNames: Array<TabNameTypes> = [
   },
 ];
 
-export const HeaderLink: FC<HeaderLinksType> = ({ name, tabIndex }) => {
+/* export const HeaderLink: FC<HeaderLinksType> = ({ name, tabIndex }) => {
   const [linkActive, setLinkActive] = useState<string>("");
   const location = useLocation();
   useEffect(() => {
@@ -61,7 +61,7 @@ export const HeaderLink: FC<HeaderLinksType> = ({ name, tabIndex }) => {
     }
   }, [location]);
   return (
-    <li className={`main-nav-item nav-item ${linkActive} py-3 px-4`}>
+    <li className={`main-nav-item nav-item ${linkActive} px-4`}>
       <a href={`/${name}`} className="nav-link">
         <i
           className={`bi bi-${tabsNames[tabIndex].icon} me-1`}
@@ -71,6 +71,6 @@ export const HeaderLink: FC<HeaderLinksType> = ({ name, tabIndex }) => {
       </a>
     </li>
   );
-};
+}; */
 
 export default Header;

@@ -3,15 +3,9 @@ import { PillTitleType } from "./Types";
 import DescriptionPillTitle from "./DescriptionPillTitle";
 import DescriptionPillIcon from "./DescriptionPillIcon";
 import DescriptionPillProgress from "./DescriptionPillProgress";
-import DescriptionPillBtn from "./DescriptionPillBtn";
 import "./descriptionPills.css";
 
-const DescriptionPill: FC<PillTitleType> = ({
-  title,
-  progress,
-  icon,
-  link,
-}) => {
+const DescriptionPill: FC<PillTitleType> = ({ title, progress, icon }) => {
   return (
     <div className="col-12 col-md-4 p-3">
       <div className="lenguaje-pill shadow-lg py-2">
@@ -22,7 +16,6 @@ const DescriptionPill: FC<PillTitleType> = ({
             <DescriptionPillProgress valueNow={progress} />
           </div>
         </div>
-        {link && <DescriptionPillBtn to={link} />}
       </div>
     </div>
   );

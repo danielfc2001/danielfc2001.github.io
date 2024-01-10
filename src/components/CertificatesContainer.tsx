@@ -39,10 +39,10 @@ const CertificatesContainer: FC = () => {
         />
       </ContainerNavigation>
       {certificatesActiveNav === 0 && (
-        <ContainerPills content={CERTIFICATESPENDINGS} />
+        <ContainerPills target="certificates" content={CERTIFICATESPENDINGS} />
       )}
       {certificatesActiveNav === 1 && (
-        <ContainerPills content={CERTIFICATESFINISHEDS} />
+        <ContainerPills target="certificates" content={CERTIFICATESFINISHEDS} />
       )}
     </section>
   );

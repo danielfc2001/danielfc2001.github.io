@@ -1,6 +1,5 @@
-import React, { FC, MouseEvent, useEffect, useState } from "react";
+import React, { FC, MouseEvent, useEffect } from "react";
 import { LinkWithScrollSpyTypes, ScrollSpyType, TicksArguments } from ".";
-import { useLocation } from "react-router-dom";
 
 export const ScrollSpy: FC<ScrollSpyType> = ({
   className = "active",
@@ -129,33 +128,64 @@ export const ScrollSpy: FC<ScrollSpyType> = ({
       return tick(scrollToPosition);
     };
 
-    children.map((el: any) => {
-      const href = el.props && el.props.href;
-      const self = el.ref && el.ref.current;
+    if (children.length) {
+      children.map((el: any) => {
+        const href = el.props && el.props.href;
+        const self = el.ref && el.ref.current;
 
-      if (!self || !href || href.charAt(0) !== "#") {
-        return false;
-      }
+        if (!self || !href || href.charAt(0) !== "#") {
+          return false;
+        }
 
-      const targetElement =
-        href === "#" ? document.body : document.querySelector(href);
+        const targetElement =
+          href === "#" ? document.body : document.querySelector(href);
 
-      if (targetElement) {
-        self.onclick = (e: MouseEvent) =>
-          // eslint-disable-next-line implicit-arrow-linebreak
-          onClickHandler(
-            e,
-            targetElement.offsetTop - offsetTop,
-            targetElement.offsetLeft - offsetLeft,
-            // eslint-disable-next-line comma-dangle
-            duration
-          );
-        targetElements.push(targetElement);
-        sourceElements.push(self);
-      }
+        if (targetElement) {
+          self.onclick = (e: MouseEvent) =>
+            // eslint-disable-next-line implicit-arrow-linebreak
+            onClickHandler(
+              e,
+              targetElement.offsetTop - offsetTop,
+              targetElement.offsetLeft - offsetLeft,
+              // eslint-disable-next-line comma-dangle
+              duration
+            );
+          targetElements.push(targetElement);
+          sourceElements.push(self);
+        }
 
-      return true;
-    });
+        return true;
+      });
+    } else {
+      const arrayChildren: any = [children];
+      arrayChildren.map((el: any) => {
+        const href = el.props && el.props.href;
+        const self = el.ref && el.ref.current;
+
+        if (!self || !href || href.charAt(0) !== "#") {
+          return false;
+        }
+
+        const targetElement =
+          href === "#" ? document.body : document.querySelector(href);
+
+        if (targetElement) {
+          self.onclick = (e: MouseEvent) =>
+            // eslint-disable-next-line implicit-arrow-linebreak
+            onClickHandler(
+              e,
+              targetElement.offsetTop - offsetTop,
+              targetElement.offsetLeft - offsetLeft,
+              // eslint-disable-next-line comma-dangle
+              duration
+            );
+          targetElements.push(targetElement);
+          sourceElements.push(self);
+        }
+
+        return true;
+      });
+    }
 
     if (targetElements.length) {
       const ScrollEvent = new Event("scroll");
@@ -172,18 +202,12 @@ export const ScrollSpy: FC<ScrollSpyType> = ({
 };
 
 export const LinkWithScrollSpy: FC<LinkWithScrollSpyTypes> = React.forwardRef(
-  ({ target, to, children }, ref) => {
-    const [linkActive, setLinkActive] = useState<string>("");
-    const location = useLocation();
-    useEffect(() => {
-      if (location.hash.includes(target)) {
-        setLinkActive("active");
-      } else {
-        setLinkActive("");
-      }
-    }, [location]);
+  ({ target, to, active, children }, ref) => {
     return (
-      <li className={`main-nav-item nav-item ${linkActive} py-3 px-4`}>
+      <li
+        id={`${target}-link`}
+        className={`main-nav-item nav-item ${active ? "active" : ""}`}
+      >
         <a ref={ref} href={to} className="nav-link">
           {children}
         </a>

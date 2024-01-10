@@ -25,7 +25,7 @@ type SocialLinkTypes = {
   href: string;
 };
 
-const SocialLink: FC<SocialLinkTypes> = ({ name, href }) => {
+export const SocialLink: FC<SocialLinkTypes> = ({ name, href }) => {
   return (
     <article className="social-link-article mx-3">
       <a href={href} target="_blank">

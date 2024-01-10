@@ -11,6 +11,7 @@ export type ScrollSpyType = {
 export type LinkWithScrollSpyTypes = {
     target: string;
     to: string;
+    active: boolean;
     children: ReactNode;
     ref: ForwardedRef<HTMLAnchorElement> | undefined;
   };

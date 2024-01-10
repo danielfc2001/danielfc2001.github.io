@@ -8,11 +8,17 @@ import CertificatesContainer from "./components/CertificatesContainer";
 import { GlobalProvider } from "./context/globalContext";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import useNavigationObserver from "./hooks/useNavigationObserver";
 
 const App = () => {
+  const { objectObserved } = useNavigationObserver();
+
   return (
     <GlobalProvider>
-      <div className="container mt-4 px-0">
+      <div className="main container">
+        <div className="mobile-brand">
+          <span className="text-white">DD`Dev</span>
+        </div>
         <Header>
           <>
             <a className="brand navbar-brand ms-5" href="#">
@@ -23,34 +29,38 @@ const App = () => {
                 <LinkWithScrollSpy
                   target="about"
                   to="#about"
+                  active={objectObserved === "about" ? true : false}
                   ref={React.createRef()}
                 >
                   <i className="bi bi-file-earmark-person me-1"></i>
-                  <span>About Me</span>
+                  <span>Acerca de mi</span>
                 </LinkWithScrollSpy>
                 <LinkWithScrollSpy
                   target="learned"
                   to="#learned"
+                  active={objectObserved === "learned" ? true : false}
                   ref={React.createRef()}
                 >
                   <i className="bi bi-code-slash me-1"></i>
-                  <span>Learned</span>
+                  <span>Aprendido</span>
                 </LinkWithScrollSpy>
                 <LinkWithScrollSpy
                   target="projects"
                   to="#projects"
+                  active={objectObserved === "projects" ? true : false}
                   ref={React.createRef()}
                 >
                   <i className="bi bi-file-earmark-code-fill me-1"></i>
-                  <span>Projects</span>
+                  <span>Proyectos</span>
                 </LinkWithScrollSpy>
                 <LinkWithScrollSpy
                   target="certificates"
                   to="#certificates"
+                  active={objectObserved === "certificates" ? true : false}
                   ref={React.createRef()}
                 >
                   <i className="bi bi-patch-check-fill me-1"></i>
-                  <span>Certificates</span>
+                  <span>Certificados</span>
                 </LinkWithScrollSpy>
               </ScrollSpy>
             </ul>
