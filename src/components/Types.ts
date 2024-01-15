@@ -12,16 +12,32 @@ export type AboutUsSkillCardTypes = {
   skill: string
   usedLenguageIcon?: string
   useTecIcon?: string
+  useSecondTecIcon?: string
 }
+
+export type EmailContactTypes = {
+  email: string;
+  copyBtn: boolean;
+  linkBtn: boolean;
+};
+
+export type EmailContactBtnTypes = {
+  btnType: "copy" | "send";
+};
 
 /**
  * CONTAINER PILL TYPES
  * **/
 
+export type ContainerPillTypes = {
+  title: string;
+  target: string;
+  content: Array<ContainerPillsObj> | [];
+};
+
 export type ContainerPillsObj = {
   title: string;
   img: string;
-  progress: number;
   description?: string;
   tecs?: string[];
   link?: string;

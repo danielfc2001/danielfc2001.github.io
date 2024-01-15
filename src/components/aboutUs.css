@@ -13,7 +13,8 @@
 
 .about-us-first-header {
     font-size: 3rem !important;
-    font-weight: 400;
+    color: var(--text-dark);
+    font-weight: 600;
     padding-left: .9rem;
 }
 
@@ -21,6 +22,7 @@
     font-weight: 400;
     font-size: 1.3rem;
     background-color: var(--bs-dark);
+    color: var(--light-bg);
     padding: 1rem !important;
     padding-right: 7.5rem !important;
     border-radius: 1rem !important;
@@ -29,103 +31,74 @@
 
 .about-us-img-container {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    position: absolute;
-    right: 0;
-    top: 5%;
-    width: 30%;
-    height: 120px;
-    overflow: hidden;
-    border-radius: 50%;
-    border: .3rem solid #fff;
+    width: 100%;
 }
 
 .about-us-image {
-    width: 100%;
-    height: inherit;
+    width: 50%;
+    height: auto;
 }
 
-.about-us-image-text {
-    display: none;
-    position: absolute;
-    left: 50%;
-    top: 90%;
-    width: 90%;
-    background-color: #2125295d;
-    backdrop-filter: blur(5px);
-    border-radius: 1.2rem;
+.about-us-skill {
+    display: block;
+    width: 50%;
     text-align: center;
-    -webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.86);
-    -moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.86);
-    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.86);
-}
-
-.about-us-image-text p {
-    color: #fff;
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 0 !important;
-}
-
-.about-us-skills {
-    display: block !important;
-    margin-top: .2rem !important;
-}
-
-.about-us-skills article:first-child {
-    margin-top: 0 !important;
-    margin-inline: 0 !important;
-}
-
-.about-us-skills article {
-    width: 60%;
-    margin-top: .7rem !important;
-    margin-inline: 0 !important;
-}
-
-.about-us-skill-card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-transform: uppercase;
-    color: #fff;
-    background-color: #2f3338 !important;
-    border: 1px solid #fff;
-    border-radius: 1.5rem;
-    padding: 0.5rem 1.5rem;
-}
-
-.about-us-skill-card img {
-    width: 20px;
-    height: 20px;
-    margin-left: 0.25rem !important;
+    font-weight: 500;
+    background-color: var(--text-dark);
+    color: var(--light-bg);
+    padding-block: .5rem;
+    margin-top: .5rem;
+    border-radius: 1rem;
 }
 
 .email-contact {
+    display: block;
+    width: 100%;
     margin-top: 1.8rem !important;
 }
 
-.email-contact-input {
-    width: 60%;
-    background-color: #343a40;
+.email-contact-group {
+    display: flex;
     color: #fff;
+    justify-content: start;
+    align-items: center;
     border: 1px solid #fff;
     border-radius: .6rem;
-    padding-block: .2rem;
-    padding-left: 1rem;
+    padding-inline-start: 1rem;
+}
+
+.email-contact-icon {
+    color: var(--text-dark);
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+.email-contact-email {
+    color: #fff;
 }
 
 .email-contact-btn {
-    background-color: #343a40;
+    margin-top: .5rem;
+    width: 40%;
+    background-color: var(--btn-color);
     color: #fff;
-    border: 1px solid #fff;
-    border-radius: .6rem;
+    border: 0 !important;
+    border-radius: .5rem;
     padding-inline: 1rem;
-    padding-block: .2rem;
+    padding-block: .3rem;
+    transition: all .3s ease-in-out;
+}
+
+.email-contact-btn:hover {
+    background-color: var(--title-light);
 }
 
 .about-us-social-links {
     display: flex !important;
+    flex-direction: row;
+    width: 100%;
     justify-content: center !important;
     align-items: center !important;
     margin-left: 0 !important;
@@ -134,7 +107,7 @@
 
 .about-us-social-links a {
     display: block !important;
-    margin-right: 1.5rem !important;
+    padding-inline: 1rem;
 }
 
 .about-us-social-links a i {
@@ -153,7 +126,6 @@
 @media (min-width: 992px) {
     .about-us-container {
         height: 100vh !important;
-        padding-block: 3rem !important;
     }
 
     .about-us-first-header {
@@ -161,7 +133,8 @@
     }
 
     .about-us-header {
-        font-size: 2.5rem;
+        font-size: 1.3rem;
+        font-weight: 300;   
         background-color: transparent;
         padding: 0 !important;
         margin-bottom: 0 !important;
@@ -176,38 +149,19 @@
 
     .about-us-img-container {
         position: relative;
+        justify-content: space-between;
         width: 400px;
         height: 400px;
-        border-radius: 1rem;
-        border: 0;
-    }
-
-    .about-us-image-text {
-        display: block !important;
-    }
-
-    .about-us-skills {
-        display: flex !important;
-        justify-content: start !important;
-        align-items: center !important;
-    }
-
-    .about-us-skills article:first-child {
-        margin-inline: 0 !important;
-    }
-    
-    .about-us-skills article {
-        width: auto;
-        margin-top: 0 !important;
-        margin-left: .5rem !important;
     }
 
     .email-contact {
+        display: block;
         margin-top: 0 !important;
     }
 
     .about-us-social-links {
         display: flex !important;
+        flex-direction: column;
         justify-content: start !important;
         align-items: center !important;
         margin-top: 0 !important;
@@ -240,7 +194,7 @@
     }
 
     .scroll-next-link:hover {
-        border-bottom: 2px solid #0d6efd !important;
+        border-bottom: 2px solid var(--title-light) !important;
         transform: translate(-50%, -50%) scale(1) !important;
     }
 }

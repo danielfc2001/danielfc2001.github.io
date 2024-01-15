@@ -1,5 +1,4 @@
 import { FC, ReactElement } from "react";
-/* import { useLocation } from "react-router-dom"; */
 import "./header.css";
 
 type HeaderComponent = {
@@ -16,11 +15,6 @@ const Header: FC<HeaderComponent> = ({ children }) => {
     </nav>
   );
 };
-
-/* type HeaderLinksType = {
-  name: string;
-  tabIndex: number;
-}; */
 
 type TabNameTypes = {
   title: string;
@@ -49,28 +43,5 @@ export const tabsNames: Array<TabNameTypes> = [
     icon: "person-lines-fill",
   },
 ];
-
-/* export const HeaderLink: FC<HeaderLinksType> = ({ name, tabIndex }) => {
-  const [linkActive, setLinkActive] = useState<string>("");
-  const location = useLocation();
-  useEffect(() => {
-    if (location.hash.includes(name)) {
-      setLinkActive("active");
-    } else {
-      setLinkActive("");
-    }
-  }, [location]);
-  return (
-    <li className={`main-nav-item nav-item ${linkActive} px-4`}>
-      <a href={`/${name}`} className="nav-link">
-        <i
-          className={`bi bi-${tabsNames[tabIndex].icon} me-1`}
-          aria-hidden={true}
-        ></i>
-        <span>{tabsNames[tabIndex].title}</span>
-      </a>
-    </li>
-  );
-}; */
 
 export default Header;

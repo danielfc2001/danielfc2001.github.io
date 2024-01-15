@@ -1,17 +1,25 @@
-import React, { FC, ForwardedRef, useEffect } from "react";
+import React, { FC, ForwardedRef } from "react";
 import "./aboutUs.css";
 import { ScrollSpy } from "./ScrollSpy/ScrollSpy";
-import { Tooltip } from "bootstrap";
-import AboutUsSkillCard from "./AboutUsSkillCard";
+import EmailContact from "./EmailContact";
 
 const AboutUs: FC = () => {
   return (
     <section className="about-us-container position-relative overflow-x-hidden mx-0">
       <div className="d-block d-lg-flex justify-content-between align-items-stretch">
         <div className="about-us-img-container">
-          <AboutUsImage src="https://danielfc2001.github.io/dd-dev-profile/assets/JPG.jpg" />
-          <div className="translate-middle about-us-image-text px-4 py-2">
-            <p>Daniel Fundora Crespo</p>
+          <AboutUsImage src="https://danielfc2001.github.io/dd-dev-profile/assets/pngegg.png" />
+          <span className="about-us-skill">FullStack Dev</span>
+          <div className="about-us-social-links">
+            <AboutMeSocialLink
+              target="github"
+              href="https://github.com/DanielFC2001"
+            />
+            <AboutMeSocialLink
+              target="linkedin"
+              href="www.linkedin.com/in/daniel-fundora-crespo-35a7602aa"
+            />
+            <AboutMeSocialLink target="whatsapp" href="#" />
           </div>
         </div>
         <AboutUsTextBlock />
@@ -24,69 +32,18 @@ const AboutUs: FC = () => {
 };
 
 const AboutUsTextBlock: FC = () => {
-  useEffect(() => {
-    const tooltipSendBtn = document.getElementById("btn_email_send_tooltip");
-    const tooltipCopyBtn = document.getElementById("btn_email_copy_tooltip");
-    new Tooltip(tooltipSendBtn ? tooltipSendBtn : "", {
-      customClass: "tooltip-btn-email",
-    });
-    new Tooltip(tooltipCopyBtn ? tooltipCopyBtn : "", {
-      customClass: "tooltip-btn-email",
-    });
-  }, []);
   return (
     <div className="about-us-text-block">
-      <h1 className="about-us-first-header text-white">Hola ;)</h1>
+      <h1 className="about-us-first-header">Hola, soy Daniel Fundora.</h1>
       <h1 className="about-us-header text-white">
-        Soy Daniel, desde hace 4 años estudio programación, enfocándome en el
-        desarrollo de cara al servidor.
+        Tengo 23 años y desde hace 4 años estudio programación, enfocándome en
+        el desarrollo de cara al servidor.
       </h1>
-      <section className="about-us-skills">
-        <AboutUsSkillCard
-          skill="Frontend"
-          usedLenguageIcon="javascript"
-          useTecIcon="react"
-        />
-        <AboutUsSkillCard
-          skill="Backend"
-          usedLenguageIcon="javascript"
-          useTecIcon="nodejs"
-        />
-        <AboutUsSkillCard skill="Desktop" usedLenguageIcon="go" />
-      </section>
-      <section className="d-flex justify-content-between email-contact align-items-center">
-        <i className="bi bi-envelope-at-fill text-white fs-4 me-4"></i>
-        <input
-          id="emailContactInput"
-          type="text"
-          value={"danielfundorc@gmail.com"}
-          className="email-contact-input me-4"
-          disabled
-        />
-        <button
-          id="btn_email_copy_tooltip"
-          type="button"
-          className="email-contact-btn me-4"
-          data-bs-toggle="tooltip"
-          data-bs-title="Copy !"
-        >
-          <i className="bi bi-copy"></i>
-        </button>
-        <button
-          id="btn_email_send_tooltip"
-          type="button"
-          className="email-contact-btn"
-          data-bs-toggle="tooltip"
-          data-bs-title="Send Email !"
-        >
-          <i className="bi bi-send"></i>
-        </button>
-      </section>
-      <div className="about-us-social-links">
-        <AboutMeSocialLink target="github" href="#" />
-        <AboutMeSocialLink target="linkedin" href="#" />
-        <AboutMeSocialLink target="whatsapp" href="#" />
-      </div>
+      <EmailContact
+        email="danielfundorc@gmail.com"
+        copyBtn={true}
+        linkBtn={true}
+      />
     </div>
   );
 };

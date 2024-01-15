@@ -24,30 +24,26 @@
 }
 
 .main-nav-item a {
-    color: #ced4da;
-    background-color: var(--bs-dark);
+    color: var(--nav-link-dark-text);
+    background-color: var(--nav-link-dark);
     padding-inline: 1rem;
-    border: 1px solid #ced4da;
-    border-radius: 1rem;
+    border-radius: .5rem;
     transition: all .3s ease-in-out !important;
 }
 
 .main-nav-item a:hover {
-    color: var(--bs-dark);
-    background-color: #ced4da;
-    border-color: var(--bs-dark);
+    color: var(--light-bg);
+    background-color: var(--nav-link-dark-active);
 }
 
 .main-nav-item a:focus {
-    color: var(--bs-dark);
-    background-color: #ced4da;
-    border-color: var(--bs-dark);
+    color: var(--light-bg);
+    background-color: var(--nav-link-dark-active);
 }
 
 .main-nav-item.active a {
-    color: var(--bs-dark);
-    background-color: #ced4da;
-    border-color: var(--bs-dark);
+    color: var(--light-bg);
+    background-color: var(--nav-link-dark-active);
 }
 
 .main-nav-item span {

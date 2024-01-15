@@ -1,7 +1,7 @@
 .lenguaje-pill {
     height: auto !important;
     color: #fff !important;
-    background-color: #495057 !important;
+    background-image: linear-gradient(135deg, rgb(8, 145, 178) 0%, rgb(21, 94, 117) 100%);
     border-radius: .5rem !important;
 }
 
@@ -10,15 +10,42 @@
 }
 
 .project-pill {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
     height: auto !important;
     color: #fff !important;
     background-color: #495057 !important;
     padding-top: 0 !important;
-    padding-bottom: .5rem !important;
     border-radius: .5rem !important;
+}
+
+.pill-pr-image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+}
+
+.project-pill-content {
+    position: absolute;
+    display: flex;
+    background-image: linear-gradient(180deg, transparent 30%, rgb(21, 94, 117) 100%);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+    border-radius: .5rem;
+    transition: all .3s ease-in-out;
+}
+
+.project-pill-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-light);
 }
 
 .progress-skill {
@@ -31,13 +58,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2f3338;
+    background-color: var(--btn-color);
     color: #ced4da;
     text-decoration: none;
     padding-block: .1rem;
     padding-inline: 2rem;
-    border: 1px solid #fff;
-    border-radius: .6rem;
+    border-radius: .5rem;
+    transition: all .1s ease-in;
+}
+
+.description-pill-btn:hover {
+    background-color: var(--title-light);
 }
 
 .description-pill-btn i {
@@ -46,25 +77,16 @@
 
 .pill-pr-tecs {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding-inline: 1rem !important;
+    grid-template-columns: repeat(6, 1fr);
     margin-bottom: .5rem;
 }
 
 .pill-pr-tec {
+    font-size: 1.5rem !important;
     margin-inline: auto;
 }
 
 .pill-pr-description {
-    flex-grow: 1;
-    padding-inline: 1rem !important;
     font-size: .8rem;
     font-weight: 200;
-}
-
-.pill-pr-image {
-    display: block;
-    width: 100%;
-    height: 30vh;
-    border-radius: .5rem;
 }

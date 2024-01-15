@@ -1,14 +1,14 @@
 import AboutUs from "./components/AboutUs";
 import Header from "./components/Header";
 import { LinkWithScrollSpy, ScrollSpy } from "./components/ScrollSpy/ScrollSpy";
-import LearnContainer from "./components/LearnContainer";
-import ProjectsContainer from "./components/ProjectsContainer";
 import Footer from "./components/Footer";
-import CertificatesContainer from "./components/CertificatesContainer";
 import { GlobalProvider } from "./context/globalContext";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "devicon/devicon-base.css";
+import "devicon/devicon.min.css";
 import useNavigationObserver from "./hooks/useNavigationObserver";
+import Container from "./components/Container";
 
 const App = () => {
   const { objectObserved } = useNavigationObserver();
@@ -36,15 +36,6 @@ const App = () => {
                   <span>Acerca de mi</span>
                 </LinkWithScrollSpy>
                 <LinkWithScrollSpy
-                  target="learned"
-                  to="#learned"
-                  active={objectObserved === "learned" ? true : false}
-                  ref={React.createRef()}
-                >
-                  <i className="bi bi-code-slash me-1"></i>
-                  <span>Aprendido</span>
-                </LinkWithScrollSpy>
-                <LinkWithScrollSpy
                   target="projects"
                   to="#projects"
                   active={objectObserved === "projects" ? true : false}
@@ -54,13 +45,13 @@ const App = () => {
                   <span>Proyectos</span>
                 </LinkWithScrollSpy>
                 <LinkWithScrollSpy
-                  target="certificates"
-                  to="#certificates"
-                  active={objectObserved === "certificates" ? true : false}
+                  target="learned"
+                  to="#learned"
+                  active={objectObserved === "learned" ? true : false}
                   ref={React.createRef()}
                 >
-                  <i className="bi bi-patch-check-fill me-1"></i>
-                  <span>Certificados</span>
+                  <i className="bi bi-code-slash me-1"></i>
+                  <span>Aprendido</span>
                 </LinkWithScrollSpy>
               </ScrollSpy>
             </ul>
@@ -70,15 +61,8 @@ const App = () => {
           <section id="about">
             <AboutUs />
           </section>
-          <section id="learned">
-            <LearnContainer />
-          </section>
-          <section id="projects">
-            <ProjectsContainer />
-          </section>
-          <section id="certificates">
-            <CertificatesContainer />
-          </section>
+          <Container title="Proyectos" target="projects" />
+          <Container title="Habilidades" target="learned" />
         </div>
         <Footer />
       </div>

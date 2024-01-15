@@ -5,11 +5,7 @@ type HeaderTypes = {
 };
 
 const ContainerHeader: FC<HeaderTypes> = ({ title }) => {
-  return (
-    <div className="container-header mb-4" style={{ borderRadius: "1rem" }}>
-      <h3 className="text-white text-center mb-0">{title}</h3>
-    </div>
-  );
+  return <h3 className="text-center mb-0">{title}</h3>;
 };
 
 export default ContainerHeader;

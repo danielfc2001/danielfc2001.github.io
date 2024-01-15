@@ -5,17 +5,19 @@ const AboutUsSkillCard: FC<AboutUsSkillCardTypes> = ({
   skill,
   usedLenguageIcon,
   useTecIcon,
+  useSecondTecIcon,
 }) => {
   return (
     <article className="about-us-skill-card">
       {skill}
-      <img
-        src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${usedLenguageIcon}/${usedLenguageIcon}-original.svg`}
-      />
+      <img src={usedLenguageIcon} style={{ borderRadius: ".3rem" }} />
       {useTecIcon ? (
-        <img
-          src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${useTecIcon}/${useTecIcon}-original.svg`}
-        />
+        <img src={useTecIcon} style={{ borderRadius: ".3rem" }} />
+      ) : (
+        <></>
+      )}
+      {useSecondTecIcon ? (
+        <img src={useSecondTecIcon} style={{ borderRadius: ".3rem" }} />
       ) : (
         <></>
       )}

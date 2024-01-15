@@ -1,18 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-/* @import url('../public/assets/fonts/Rubik-VariableFont_wght.ttf'); */
 
 :root {
+  --dark-bg: #262626;
+  --dark-container: #164e63;
+  --light-bg: #ecfeef;
+  --text-dark: #06b6d4;
+  --text-light: #06b6d4;
+  --title-light: #155e75;
+  --nav-link-dark: #083344;
+  --nav-link-dark-active: #22d3ee;
+  --nav-link-dark-text: #cffafe;
+  --btn-color: #0891b2;
   font-family: 'Rubik', sans-serif !important;
   line-height: 1.5;
   font-weight: 400;
+  
 }
 
 body {
-  background-color: #343a40;
+  background-color: var(--dark-bg);
 }
 
 .container {
-  padding-inline: 0 !important;
+  --bs-gutter-x: 0 !important;
 }
 
 .main {
@@ -20,6 +30,10 @@ body {
 }
 
 @media (min-width: 992px) {
+  .container {
+    --bs-gutter-x: 5rem !important;
+  }
+
   .main {
     margin-top: 1.5rem !important;
   }
