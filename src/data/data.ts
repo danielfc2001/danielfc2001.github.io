@@ -40,7 +40,7 @@ export const PROJECTS = [
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, quam!",
     progress: 50,
-    img: "https://danielfc2001.github.io/dd-dev-profile/assets/JPG.jpg",
+    img: "https://danielfc2001.github.io/assets/JPG.jpg",
     tecs: ["react", "nodejs"],
     link: "#",
     demo: "#",
