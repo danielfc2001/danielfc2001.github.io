@@ -8,7 +8,7 @@ const AboutUs: FC = () => {
     <section className="about-us-container position-relative overflow-x-hidden mx-0">
       <div className="d-block d-lg-flex justify-content-between align-items-stretch">
         <div className="about-us-img-container">
-          <AboutUsImage src="https://danielfc2001.github.io/dd-dev-profile/assets/pngegg.png" />
+          <AboutUsImage src="https://danielfc2001.github.io/assets/pngegg.png" />
           <span className="about-us-skill">FullStack Dev</span>
           <div className="about-us-social-links">
             <AboutMeSocialLink
