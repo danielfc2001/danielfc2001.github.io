@@ -38,7 +38,7 @@ export const PROJECTS = [
   {
     title: "Url Shortener Project",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, quam!",
+      "Sistema de acortado de urls. Con autenticación integrada, analíticas para los enlaces que tenga el usuario almacenado. Generación de códigos QR.",
     progress: 50,
     img: "https://danielfc2001.github.io/assets/project_swifturl.png",
     tecs: ["react", "javascript", "nodejs"],
