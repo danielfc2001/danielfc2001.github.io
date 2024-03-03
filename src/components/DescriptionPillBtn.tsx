@@ -12,7 +12,7 @@ const DescriptionPillBtn: FC<DescriptionPillBtnTypes> = ({
   to,
 }) => {
   return (
-    <a className="description-pill-btn" href={to} role="button">
+    <a className="description-pill-btn" href={to} target="_blank" role="button">
       {icon === "code-slash" ? (
         <i className={`devicon-github-plain`}></i>
       ) : (

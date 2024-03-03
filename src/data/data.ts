@@ -36,40 +36,13 @@ export const LENGUAGES: LenguagesTypes[] = [
 
 export const PROJECTS = [
   {
-    title: "Ad`Publisher",
+    title: "Url Shortener Project",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, quam!",
     progress: 50,
-    img: "https://danielfc2001.github.io/assets/JPG.jpg",
-    tecs: ["react", "nodejs"],
-    link: "#",
-    demo: "#",
-  },
-  {
-    title: "DD`Dev Profile",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, quam!",
-    progress: 50,
-    img: "https://danielfc2001.github.io/assets/JPG.jpg",
-    link: "#",
-    demo: "#",
-  },
-  {
-    title: "DD`Dev Profile",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, quam!",
-    progress: 50,
-    img: "https://danielfc2001.github.io/assets/JPG.jpg",
-    link: "#",
-    demo: "#",
-  },
-  {
-    title: "DD`Dev Profile",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, quam!",
-    progress: 50,
-    img: "https://danielfc2001.github.io/assets/JPG.jpg",
-    link: "#",
-    demo: "#",
-  },
+    img: "https://danielfc2001.github.io/assets/project_swifturl.png",
+    tecs: ["react", "javascript", "nodejs"],
+    link: "https://github.com/danielfc2001/url-shortener-web-app",
+    demo: "https://swifturl.onrender.com",
+  }
 ];
